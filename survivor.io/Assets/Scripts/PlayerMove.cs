@@ -23,7 +23,5 @@ public class PlayerMove : MonoBehaviour
         InputY = Input.GetAxis("Vertical");
         Vector2 pos = new Vector2(InputX * _speed, InputY * _speed);
         playerBody.velocity = pos;
-
-        Debug.DrawLine(transform.position,transform.forward);
     }
 }

@@ -9,7 +9,7 @@ public class SetState : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     void Start()
     {
-        playerBody = GetComponent<Rigidbody2D>();
+        playerBody = GetComponentInParent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
