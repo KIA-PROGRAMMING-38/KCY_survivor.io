@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     public float _speed;
     private Rigidbody2D playerBody;
 
-    void Start()
+    private void Awake()
     {
         playerBody = GetComponent<Rigidbody2D>();
     }
@@ -18,7 +18,7 @@ public class PlayerMove : MonoBehaviour
     {
         InputX = Input.GetAxis("Horizontal");
         InputY = Input.GetAxis("Vertical");
-        Vector2 pos = new Vector2(InputX * _speed, InputY * _speed);
+        Vector2 pos = new Vector2(InputX, InputY).normalized * _speed;
         playerBody.velocity = pos;
     }
 }
