@@ -6,7 +6,7 @@ public class TraceTarget : MonoBehaviour
 {
     public Rigidbody2D target;
     private Rigidbody2D rigid;
-    private SpriteRenderer renderer;
+    private new SpriteRenderer renderer;
     public float speed;
 
     void Awake()
@@ -33,5 +33,10 @@ public class TraceTarget : MonoBehaviour
         {
             renderer.flipX = false;
         }
+    }
+
+    private void OnEnable()
+    {
+        target = GameManager.instance.player.GetComponent<Rigidbody2D>();
     }
 }
