@@ -13,11 +13,11 @@ public class RePosition : MonoBehaviour
         
         Vector3 playerPos = GameManager.instance.player.transform.position;
         Vector3 panelPos = GetComponent<Transform>().position;
-        float asdf = playerPos.y - panelPos.y;
+        float panelDir = playerPos.y - panelPos.y;
         Vector3 movePos = new Vector3(0f, 340, 0f);
 
        
-        if (asdf > 0)
+        if (panelDir > 0)
         {
             GetComponent<Transform>().position += movePos;
         }
@@ -25,7 +25,5 @@ public class RePosition : MonoBehaviour
         {
             GetComponent<Transform>().position -= movePos;
         }
-
-        
     }
 }
