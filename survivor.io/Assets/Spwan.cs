@@ -5,7 +5,6 @@ using UnityEngine;
 public class Spwan : MonoBehaviour
 {
     public Transform[] spawnPoint;
-
     float elapsedTime;
 
     private void Awake()
@@ -17,7 +16,7 @@ public class Spwan : MonoBehaviour
     {
         elapsedTime += Time.deltaTime;
 
-        if (elapsedTime > 1f)
+        if (elapsedTime > 0.5f)
         {
             Spawn();
             elapsedTime = 0f;
@@ -26,7 +25,9 @@ public class Spwan : MonoBehaviour
 
     private void Spawn()
     {
-            GameObject monster = GameManager.instance.pool.Get(Random.Range(0, 4));
-            monster.transform.position = spawnPoint[Random.Range(0, spawnPoint.Length)].position;
+        GameObject monster = GameManager.instance.pool.Get(Random.Range(0, 4));
+        monster.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
     }
+
+   
 }
