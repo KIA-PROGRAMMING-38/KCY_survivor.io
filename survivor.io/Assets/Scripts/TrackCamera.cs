@@ -5,7 +5,6 @@ using UnityEngine;
 public class TrackCamera : MonoBehaviour
 {
     public GameObject target;
-    
    
     private void LateUpdate()
     {
