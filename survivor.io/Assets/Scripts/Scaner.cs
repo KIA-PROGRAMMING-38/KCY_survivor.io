@@ -13,12 +13,10 @@ public class Scaner : MonoBehaviour
     void FixedUpdate()
     {
         targets = Physics2D.CircleCastAll(transform.position, scanRange, Vector2.zero, 0, targetLayer);
-        targetPos = GetNearest();
-
-        Debug.Log(targetPos);
+        targetPos = GetNearTarget();
     }
 
-    Transform GetNearest()
+    Transform GetNearTarget()
     {
         Transform result = null;
 
@@ -37,7 +35,6 @@ public class Scaner : MonoBehaviour
                 result = target.transform;
             }
         }
-
         return result;
     }
 }
