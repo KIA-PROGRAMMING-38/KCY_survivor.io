@@ -26,8 +26,9 @@ public class Spwan : MonoBehaviour
 
     private void Spawn()
     {
-        GameObject monster = GameManager.instance.pool.Get(Random.Range(0, 4));
+        GameObject monster = GameManager.instance.monsterPool.Get(Random.Range(0, 4),this.transform);
         monster.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
+        
     }
 
    

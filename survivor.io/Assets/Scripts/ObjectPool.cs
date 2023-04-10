@@ -17,7 +17,7 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
-    public GameObject Get(int index)
+    public GameObject Get(int index, Transform trnasform)
     {
         GameObject select = null;
 
