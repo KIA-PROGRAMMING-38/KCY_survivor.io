@@ -15,8 +15,9 @@ public class Spwan : MonoBehaviour
     void Update()
     {
         elapsedTime += Time.deltaTime;
+        GameManager.instance.gameTimer += Time.deltaTime;
 
-        if (elapsedTime > 0.5f)
+        if (elapsedTime > (GameManager.instance.gameTimer > 10f ? 0.5f : 1f)) 
         {
             Spawn();
             elapsedTime = 0f;
