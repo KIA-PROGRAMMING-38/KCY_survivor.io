@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8324725862947218063}
   - component: {fileID: 8686086551390869027}
   - component: {fileID: 5687153991277075652}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MSlime1
   m_TagString: Monster
   m_Icon: {fileID: 0}

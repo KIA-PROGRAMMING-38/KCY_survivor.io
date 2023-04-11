@@ -33,7 +33,7 @@ public class ObjectPool : MonoBehaviour
         }
             if (select == null)
             {
-                select = Instantiate(prefabs[index], transform);
+                select = Instantiate(prefabs[index]);
                 pools[index].Add(select);
             }
 
