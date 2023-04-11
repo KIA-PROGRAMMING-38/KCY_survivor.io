@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1865286917341333024}
   - component: {fileID: 3732232483502519604}
   m_Layer: 0
-  m_Name: Kunai
+  m_Name: Dagger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

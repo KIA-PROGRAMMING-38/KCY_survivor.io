@@ -12,7 +12,7 @@ public class Spwan : MonoBehaviour
         spawnPoint = GetComponentsInChildren<Transform>();
     }
    
-    void Update()
+    private void Update()
     {
         elapsedTime += Time.deltaTime;
         GameManager.instance.gameTimer += Time.deltaTime;
