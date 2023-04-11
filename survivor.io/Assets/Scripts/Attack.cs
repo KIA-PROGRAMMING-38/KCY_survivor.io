@@ -17,9 +17,9 @@ public class Attack : MonoBehaviour
     }
     public void Start()
     {
-        weaponStatus = new WeaponStatus();
-        weaponStatus.per = 1;
-        weaponStatus.damage = 10;
+        weaponStatus = new WeaponStatus(); // 발사될 무기의 상태 클래스
+        weaponStatus.Init(10, 1, 1);
+
     }
 
 
@@ -28,7 +28,7 @@ public class Attack : MonoBehaviour
     {
         elapsedTime += Time.deltaTime;
 
-        if (elapsedTime >= weaponStatus.per)
+        if (elapsedTime >= weaponStatus.per) // 일정 주기로 발사하기 위함
         {
             if (GameManager.instance.player.GetComponent<Scaner>().targetPos)
             {
@@ -40,11 +40,11 @@ public class Attack : MonoBehaviour
 
     void Shoot()
     {
-        GameObject spawnWeapon = GameManager.instance.weaponPool.Get(0);
-        spawnWeapon.transform.position = transform.position;
+        GameObject spawnWeapon = GameManager.instance.weaponPool.Get(weaponStatus.index); // 풀의 해당하는 프리팹 인덱스를 통해 꺼내온다.
+        spawnWeapon.transform.position = transform.position; //생성 위치
         rigid = spawnWeapon.GetComponent<Rigidbody2D>();
         rigid.velocity = (GameManager.instance.player.GetComponent<Scaner>().targetPos.position - transform.position).normalized * speed;
-        rigid.AddTorque(angleSpeed);
+        rigid.AddTorque(angleSpeed); // 투사체 회전
     }
 
 }
