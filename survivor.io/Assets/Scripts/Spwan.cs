@@ -11,7 +11,11 @@ public class Spwan : MonoBehaviour
     {
         spawnPoint = GetComponentsInChildren<Transform>();
     }
-   
+
+    private void Start()
+    {
+        
+    }
     private void Update()
     {
         elapsedTime += Time.deltaTime;
@@ -22,6 +26,7 @@ public class Spwan : MonoBehaviour
             Spawn();
             elapsedTime = 0f;
         }
+       
     }
 
     private void Spawn()

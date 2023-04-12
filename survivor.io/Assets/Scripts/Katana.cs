@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
 
-public class Dagger : MonoBehaviour ,IWeapon
+public class Katana : IWeapon
 {
     public void Attack()
     {
-        Debug.Log("표창 공격");
+        Debug.Log("카타나 공격");
     }
 }
-
-
- 
 
