@@ -871,8 +871,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 926849460}
   gameTimer: 0
-  monsterPool: {fileID: 0}
-  weaponPool: {fileID: 0}
 --- !u!4 &581961817
 Transform:
   m_ObjectHideFlags: 0
@@ -2566,7 +2564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f75653bd7fe0e9241aaf61a8e961b326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultWeapon: {fileID: 1214319136903887294, guid: 706b3467c6799664c9e76d246881f82d, type: 3}
+  defaultWeapon: {fileID: 928677017079380359, guid: a32a3843f4c91e54b8e06372c09a5d9e, type: 3}
 --- !u!1 &1515692805
 GameObject:
   m_ObjectHideFlags: 0

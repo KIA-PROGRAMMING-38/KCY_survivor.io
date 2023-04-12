@@ -6,7 +6,7 @@ using System;
 using UnityEngine.Assertions;
 using UnityEditor;
 
-public class WeaponManager : MonoBehaviour
+public class Weapon : MonoBehaviour
 {
     WeaponStrategy[] strategy; // 각 weapon 전략을 담을 배열
     private Dictionary<string, int> weapons;  // weapon ID를 등록하기 위한 사전

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Unity.VisualScripting;
 
-class WeaponStrategy
+public class WeaponStrategy
 {
     IWeapon Weapon;
     
