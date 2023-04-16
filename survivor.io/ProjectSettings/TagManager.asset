@@ -8,6 +8,9 @@ TagManager:
   - Ground
   - Area
   - SpawnSide
+  - AngleSide
+  - AngleSideX
+  - AngleSideY
   layers:
   - Default
   - TransparentFX

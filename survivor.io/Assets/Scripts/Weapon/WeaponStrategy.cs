@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Unity.VisualScripting;
+using Unity;
+using UnityEngine;
 
-class WeaponStrategy
+public class WeaponStrategy
 {
     IWeapon Weapon;
     
