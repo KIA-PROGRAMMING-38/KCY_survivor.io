@@ -10,21 +10,13 @@ using UnityEngine.Pool;
 public class Dagger : MonoBehaviour ,IWeapon
 {
     public float speed;
-    private IObjectPool<Dagger> daggerPool;
+    
     public void Attack()
     {
         Debug.Log("표창 공격");
     }
 
-    public void SetPool(IObjectPool<Dagger> pool)
-    {
-        daggerPool = pool;
-    }
-
-    public void DestroyObj()
-    {
-        daggerPool.Release(this);
-    }
+  
 }
 
 

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -2094055265610523743}
   - component: {fileID: 8324725862947218063}
   - component: {fileID: 8686086551390869027}
+  - component: {fileID: -8358443020992365337}
   - component: {fileID: 5687153991277075652}
   m_Layer: 6
   m_Name: MSlime1
@@ -157,6 +158,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 10
+--- !u!114 &-8358443020992365337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019452549684313878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1142eac753647cf4eac4c6c3dc41ccb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!70 &5687153991277075652
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
