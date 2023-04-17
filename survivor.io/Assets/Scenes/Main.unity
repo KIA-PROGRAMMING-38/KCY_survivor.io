@@ -715,6 +715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 455237959}
   - component: {fileID: 455237960}
+  - component: {fileID: 455237961}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -765,7 +766,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5336b33876929314588747ce5ca95b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsterPrefab:
+  - {fileID: 5426989782344877158, guid: cf81197720f11494f94161d37ce2f052, type: 3}
+  - {fileID: -8358443020992365337, guid: 38a83d14dd7c5c3408c01c22104c489c, type: 3}
+  - {fileID: 7688537263545125707, guid: dcb3241f41f1cf74da29446dae7bcec7, type: 3}
+  - {fileID: -3546098245300332800, guid: c51c23e472988954ab5ade97052a41eb, type: 3}
   spawnPoint: []
+--- !u!114 &455237961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455237958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe558bc170be023478c6bcdf1feb41d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab:
+  - {fileID: -4784726230343807222, guid: 55f401ce4c03c2a4c9b36c06ece00b3a, type: 3}
+  - {fileID: -355402498706131950, guid: bc5d9c2d5c15c204198c218735f59bdf, type: 3}
+  - {fileID: -2038204218815552761, guid: 4220593ccc43bbf4cadaee5aee46d876, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
