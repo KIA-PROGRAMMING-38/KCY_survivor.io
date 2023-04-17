@@ -15,13 +15,12 @@ public class TraceTarget : MonoBehaviour
         renderer = GetComponent<SpriteRenderer>();
     }
 
-    
+
     void FixedUpdate()
     {
         Vector2 tracePos = target.transform.position - transform.position;
         rigid.MovePosition(rigid.position + tracePos.normalized * speed * Time.fixedDeltaTime);
         rigid.velocity = Vector2.zero;
-
     }
     private void LateUpdate()
     {

@@ -11,6 +11,8 @@ TagManager:
   - AngleSide
   - AngleSideX
   - AngleSideY
+  - Weapon
+  - Item
   layers:
   - Default
   - TransparentFX
