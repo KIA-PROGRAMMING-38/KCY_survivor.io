@@ -7,9 +7,17 @@ using UnityEngine;
 public class RotationSaw : MonoBehaviour, IWeapon
 {
     public int level;
-    Vector3 movePos;
+    private Vector3 movePos;
     public float radius;
-    
+    private int atk;
+    private Monster monster;
+
+    private void Start()
+    {
+        level = 1;
+        atk = 1;
+
+    }
 
     public void Attack()
     {
@@ -23,11 +31,14 @@ public class RotationSaw : MonoBehaviour, IWeapon
                 Instantiate(this, WeaponManager.Instance.weaponPos.transform).transform.position += movePos * radius;
 
             }
-           
-            
-
         }
-        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Monster"))
+            return;
 
+        monster = collision.gameObject.GetComponent<Monster>();
+        monster.monsterHealth -= atk;
     }
 }

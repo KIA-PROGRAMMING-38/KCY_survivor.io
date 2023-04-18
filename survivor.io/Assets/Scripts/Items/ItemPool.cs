@@ -23,7 +23,7 @@ public class ItemPool : MonoBehaviour
 
     private Item CreateItem()
     {
-        Item item = Instantiate(itemPrefab[UnityEngine.Random.Range(0, 2)]);
+        Item item = Instantiate(itemPrefab[UnityEngine.Random.Range(0, 3)]);
         item.SetPool(itemPool);
         return item;
     }

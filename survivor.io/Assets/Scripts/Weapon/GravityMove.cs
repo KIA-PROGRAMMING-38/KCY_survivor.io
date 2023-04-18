@@ -5,7 +5,7 @@ using UnityEngine;
 public class GravityMove : MonoBehaviour
 {
     public float angleSpeed;
-    public float attackRange;
+    
     private Transform[] childTransforms;
 
     private void Awake()
@@ -20,11 +20,5 @@ public class GravityMove : MonoBehaviour
         childTransforms[3].Rotate(0, 0, angleSpeed);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (!collision.CompareTag("Monster"))
-            return;
-
-        Debug.Log("몬스터 공격");
-    }
+  
 }

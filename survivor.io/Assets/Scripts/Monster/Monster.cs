@@ -7,7 +7,7 @@ using UnityEngine.Pool;
 public class Monster : MonoBehaviour
 {
     public IObjectPool<Monster> monsterPool;
-    public Zombie1Data data;
+    public MonsterData data;
     private new SpriteRenderer renderer;
     private Animator animator;
     private WaitForSeconds wait;
@@ -49,10 +49,16 @@ public class Monster : MonoBehaviour
         if (!collision.CompareTag("Weapon"))
             return;
 
-        monsterHealth--;
-
         StartCoroutine(TakeDamage());
 
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Weapon"))
+            return;
+
+        StartCoroutine(TakeDamage());
     }
 
     IEnumerator TakeDamage()

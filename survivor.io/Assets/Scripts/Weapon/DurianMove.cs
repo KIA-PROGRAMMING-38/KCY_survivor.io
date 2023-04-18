@@ -36,14 +36,12 @@ public class DurianMove : MonoBehaviour
                 Vector2 incomingVector = movePos.normalized;
                 Vector2 reflectXVector = Vector2.Reflect(incomingVector, horizontalNormalVec);
                 movePos = reflectXVector.normalized * speed;
-                Debug.Log("충돌");
                 break;
 
             case "AngleSideY":
                 Vector2 incomingYVector = movePos.normalized;
                 Vector2 reflectYVector = Vector2.Reflect(incomingYVector, verticalNormalVec);
                 movePos = reflectYVector.normalized * speed;
-                Debug.Log("충돌");
                 break;
         }
     }
