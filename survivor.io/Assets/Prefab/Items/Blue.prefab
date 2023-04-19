@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 874852602248846781}
   - component: {fileID: 8821105301773218952}
   - component: {fileID: -355402498706131950}
+  - component: {fileID: 6818831769108172665}
   m_Layer: 0
-  m_Name: ExpItem2
+  m_Name: Blue
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,3 +128,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d89e1e427597980439c08f9f911a57eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AddExp: 0
+  itemData: {fileID: 11400000, guid: 029ba86091cf113408594e5b9c08525e, type: 2}
+--- !u!50 &6818831769108172665
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758582961786061136}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

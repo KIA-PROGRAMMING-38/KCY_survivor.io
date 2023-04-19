@@ -15,6 +15,7 @@ public class Monster : MonoBehaviour
     public Rigidbody2D rigid;
     public int monsterHealth;
     public Collider2D coll;
+    public float hitreact;
    
    
 
@@ -63,11 +64,13 @@ public class Monster : MonoBehaviour
 
     IEnumerator TakeDamage()
     {
-        if (monsterHealth > 0)
+        if (monsterHealth >= 0)
         {
-            
+           
             renderer.color = Color.gray;
+
             yield return wait;
+            transform.localScale = new Vector3(13, 13, 1);
             renderer.color = new Color(1, 1, 1);
            
         }

@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb0bfed8bfffeae4a862c54a7271db28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 3
+  level: 5
   radius: 15
 --- !u!114 &5323374237841606505
 MonoBehaviour:
@@ -130,3 +130,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angleSpeed: 1
+  rotateSpeed: 1

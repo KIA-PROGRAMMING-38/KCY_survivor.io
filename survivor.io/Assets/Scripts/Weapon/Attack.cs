@@ -6,10 +6,17 @@ public class Attack : MonoBehaviour
 {
   
     public GameObject defaultWeapon;
+    public GameObject secondWeapon;
+    public GameObject thirdWeapon;
+    public GameObject fourthWeapon;
+   
     void Start()
     {
         WeaponManager.Instance.Init();
         WeaponManager.Instance.Registration(defaultWeapon);
+        WeaponManager.Instance.Registration(secondWeapon);
+        WeaponManager.Instance.Registration(thirdWeapon);
+        WeaponManager.Instance.Registration(fourthWeapon);
     }
 
     
