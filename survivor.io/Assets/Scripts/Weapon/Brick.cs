@@ -8,8 +8,8 @@ public class Brick : MonoBehaviour, IWeapon
 {
     private float elapsedTime;
     private static Stack<Brick> brickPool;
-   
-    public int atk;
+    public WeaponData brickData;
+    
    
     private Monster monster;
     private Brick brick;
@@ -55,7 +55,7 @@ public class Brick : MonoBehaviour, IWeapon
             return;
         
         monster = collision.gameObject.GetComponent<Monster>();
-        monster.monsterHealth -= atk;
+        monster.monsterHealth -= brickData.Atk;
      
     }
 

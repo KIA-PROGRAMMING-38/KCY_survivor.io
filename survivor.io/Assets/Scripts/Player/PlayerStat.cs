@@ -6,17 +6,19 @@ public class PlayerStat : MonoBehaviour
 {
     public PlayerData data;
     
-    
-    
-    // Start is called before the first frame update
     void Start()
     {
         data.Init();
     }
     private void Update()
     {
-        Debug.Log(data.currentExp);
+       if (data.Hp <=0 )
+        {
+            Time.timeScale = 0;
+        }
     }
-    // Update is called once per frame
+
+   
+    
    
 }

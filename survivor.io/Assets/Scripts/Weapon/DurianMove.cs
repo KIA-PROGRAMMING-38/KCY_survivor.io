@@ -12,9 +12,7 @@ public class DurianMove : MonoBehaviour
     private Vector2 movePos;
     private Vector2 verticalNormalVec;
     private Vector2 horizontalNormalVec;
-    private Monster monster;
-    public WeaponData durianStat;
-    private int durianAtk;
+    
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -26,7 +24,7 @@ public class DurianMove : MonoBehaviour
         horizontalNormalVec = new Vector2(-1, 0);
         verticalNormalVec = new Vector2(0, -1);
         rigid.AddTorque(angleSpeed);
-        durianAtk = durianStat.Atk;
+        
     }
 
     private void Update()
@@ -48,11 +46,6 @@ public class DurianMove : MonoBehaviour
                 Vector2 reflectYVector = Vector2.Reflect(incomingYVector, verticalNormalVec);
                 movePos = reflectYVector.normalized * speed;
                 break;
-            case "Monster":
-                monster = collision.gameObject.GetComponent<Monster>();
-                monster.monsterHealth -= durianAtk;
-                break;
-
         }
     }
 }

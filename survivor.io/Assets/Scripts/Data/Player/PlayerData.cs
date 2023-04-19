@@ -13,7 +13,7 @@ public class PlayerData : ScriptableObject
 
     public void Init()
     {
-        Hp = 100;
+        Hp = 200;
         Level = 1;
         isDead = false;
         currentExp = 0;

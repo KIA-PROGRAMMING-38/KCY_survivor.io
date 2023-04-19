@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class GravityField : MonoBehaviour, IWeapon
 {
-
-    private static float elapsedTime;
-    private static List<Monster> monster;
-    public int atk;
+    private static List<Monster>  monster;
+    private float elapsedTime;
+    public WeaponData gravityData;
     public void Attack()
     {
         if (monster == null)
         {
             monster = new List<Monster>();
         }
+       
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(this, WeaponManager.Instance.weaponPos.transform);
@@ -28,14 +29,15 @@ public class GravityField : MonoBehaviour, IWeapon
 
         monster.Add(collision.GetComponent<Monster>());
     }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
 
         if (elapsedTime >= 1)
         {
-           foreach (Monster m in monster) 
+            foreach (Monster monster in monster)
             {
-                m.monsterHealth = m.monsterHealth - atk;
+                monster.monsterHealth = monster.monsterHealth - gravityData.Atk;
             }
             elapsedTime = 0;
         }

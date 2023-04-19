@@ -147,8 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ce3f934841a504cb2eccc58ac58dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atk: 5
-  hp: 3
+  brickData: {fileID: 11400000, guid: 37c8f6ec8ce24484da7f9b1e1e49477b, type: 2}
 --- !u!114 &6948927578273860672
 MonoBehaviour:
   m_ObjectHideFlags: 0

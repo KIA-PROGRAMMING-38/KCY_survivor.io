@@ -13,6 +13,7 @@ TagManager:
   - AngleSideY
   - Weapon
   - Item
+  - Acquired
   layers:
   - Default
   - TransparentFX

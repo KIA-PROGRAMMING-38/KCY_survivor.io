@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17d6a7c810a62a14588e834bfd7596cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  durianStat: {fileID: 11400000, guid: 3857e9a509ede9d4f81ac8846281020e, type: 2}
 --- !u!114 &3216771001527259847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,4 +152,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 60
   angleSpeed: -100
-  durianStat: {fileID: 11400000, guid: 3857e9a509ede9d4f81ac8846281020e, type: 2}
