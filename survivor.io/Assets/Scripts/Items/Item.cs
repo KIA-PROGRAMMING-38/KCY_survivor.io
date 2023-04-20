@@ -5,7 +5,14 @@ using UnityEngine.Pool;
 
 public class Item : MonoBehaviour
 {
+    public int AddExp;
+    public ItemData itemData;
     public IObjectPool<Item> item1Pool;
+
+    private void Start()
+    {
+        AddExp = itemData.Addexp;
+    }
 
     public void SetPool(IObjectPool<Item> pool)
     {
@@ -16,4 +23,6 @@ public class Item : MonoBehaviour
     {
         item1Pool.Release(this);
     }
+
+    
 }

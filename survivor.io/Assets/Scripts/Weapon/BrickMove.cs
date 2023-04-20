@@ -12,29 +12,20 @@ public class BrickMove : MonoBehaviour
     public float power;
     private float range;
     private Vector2 shootVec;
-    public int Hp;
+    public Stack<Brick> brickPool;
    
     // Start is called before the first frame update
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        brickPool = new Stack<Brick>();
     }
-    void Start()
+    
+    private void OnEnable()
     {
         range = UnityEngine.Random.Range(-10, 10);
         shootVec = new Vector2(range, power);
         rigid.AddForce(shootVec, ForceMode2D.Impulse);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (!collision.CompareTag("Monster"))
-            return;
-     
-        Hp--;
-        if (Hp == 0)
-        {
-            Destroy(gameObject);
-        }
-    }
 }
+

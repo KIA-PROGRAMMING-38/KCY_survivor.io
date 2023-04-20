@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class DurianMove : MonoBehaviour
 {
     private Rigidbody2D rigid;
+
     public float speed;
     public float angleSpeed;
     private Vector2 movePos;
     private Vector2 verticalNormalVec;
     private Vector2 horizontalNormalVec;
+    
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -21,7 +24,7 @@ public class DurianMove : MonoBehaviour
         horizontalNormalVec = new Vector2(-1, 0);
         verticalNormalVec = new Vector2(0, -1);
         rigid.AddTorque(angleSpeed);
-
+        
     }
 
     private void Update()
@@ -36,14 +39,12 @@ public class DurianMove : MonoBehaviour
                 Vector2 incomingVector = movePos.normalized;
                 Vector2 reflectXVector = Vector2.Reflect(incomingVector, horizontalNormalVec);
                 movePos = reflectXVector.normalized * speed;
-                Debug.Log("충돌");
                 break;
 
             case "AngleSideY":
                 Vector2 incomingYVector = movePos.normalized;
                 Vector2 reflectYVector = Vector2.Reflect(incomingYVector, verticalNormalVec);
                 movePos = reflectYVector.normalized * speed;
-                Debug.Log("충돌");
                 break;
         }
     }

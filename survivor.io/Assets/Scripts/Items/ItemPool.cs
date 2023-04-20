@@ -10,6 +10,7 @@ public class ItemPool : MonoBehaviour
 {
     public Item[] itemPrefab;
     private ObjectPool<Item> itemPool;
+    private float spawnPer;
     
     private void Awake()
     {
@@ -19,11 +20,13 @@ public class ItemPool : MonoBehaviour
             OnRelease,
             OnDestroyPoolObject,
             maxSize: 200);
+
+        
     }
 
     private Item CreateItem()
     {
-        Item item = Instantiate(itemPrefab[UnityEngine.Random.Range(0, 2)]);
+        Item item = Instantiate(itemPrefab[UnityEngine.Random.Range(0, 3)]);
         item.SetPool(itemPool);
         return item;
     }
@@ -46,8 +49,11 @@ public class ItemPool : MonoBehaviour
 
     private void OnDisable()
     {
-        itemPool.Get();
+        spawnPer = UnityEngine.Random.Range(0, 10);
+
+        if (spawnPer >= 3)
+        {
+            itemPool.Get();
+        }
     }
-
-
 }

@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1595683898, guid: 37fa4dfeb4e50a043abd9b7a66760e03, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -171,11 +171,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1142eac753647cf4eac4c6c3dc41ccb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: b0e6c807ac531bb43b6e78351a93011a, type: 2}
+  data: {fileID: 11400000, guid: 4c1078b0cd3538041aa0c632f62367ff, type: 2}
   isDead: 0
-  rigid: {fileID: 0}
   monsterHealth: 0
-  coll: {fileID: 0}
 --- !u!70 &7476705862740057212
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

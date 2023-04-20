@@ -6,28 +6,32 @@ using UnityEngine;
 
 public class RotationSaw : MonoBehaviour, IWeapon
 {
-    public int level;
-    Vector3 movePos;
+    private Vector3 movePos;
     public float radius;
-    
+    private Monster monster;
+    public WeaponData sawData;
 
+  
     public void Attack()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             float angle = Mathf.PI * 2;
-            for (int i = 1; i <= level + 1; i ++)
+            for (int i = 1; i <= sawData.Level + 1; i ++)
             {
-                movePos = new Vector3(Mathf.Cos(angle / (level + 1) * i),
-               Mathf.Sin(angle / (level + 1) * i)).normalized;
+                movePos = new Vector3(Mathf.Cos(angle / (sawData.Level + 1) * i),
+               Mathf.Sin(angle / (sawData.Level + 1) * i)).normalized;
                 Instantiate(this, WeaponManager.Instance.weaponPos.transform).transform.position += movePos * radius;
 
             }
-           
-            
-
         }
-        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Monster"))
+            return;
 
+        monster = collision.gameObject.GetComponent<Monster>();
+        monster.monsterHealth -= sawData.Atk;
     }
 }
