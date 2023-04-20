@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Flower1Stat
   m_EditorClassIdentifier: 
   Hp: 8
-  Atk: 4
+  Atk: 1
   isDead: 0

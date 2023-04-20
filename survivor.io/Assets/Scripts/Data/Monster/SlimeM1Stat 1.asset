@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SlimeM1Stat 1
   m_EditorClassIdentifier: 
   Hp: 7
-  Atk: 2
+  Atk: 1
   isDead: 0

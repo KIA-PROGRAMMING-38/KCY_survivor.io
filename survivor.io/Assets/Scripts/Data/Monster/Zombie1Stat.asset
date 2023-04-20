@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Zombie1Stat
   m_EditorClassIdentifier: 
   Hp: 10
-  Atk: 3
+  Atk: 1
   isDead: 0

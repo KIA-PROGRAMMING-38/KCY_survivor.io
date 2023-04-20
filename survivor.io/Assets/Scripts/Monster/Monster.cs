@@ -49,8 +49,9 @@ public class Monster : MonoBehaviour
     {
         if (!collision.CompareTag("Weapon"))
             return;
-
+        
         StartCoroutine(TakeDamage());
+        
 
     }
 
@@ -59,18 +60,19 @@ public class Monster : MonoBehaviour
         if (!collision.CompareTag("Weapon"))
             return;
 
-        StartCoroutine(TakeDamage());
+       
+        
     }
 
     IEnumerator TakeDamage()
     {
         if (monsterHealth >= 0)
         {
-           
-            renderer.color = Color.gray;
 
+            animator.SetTrigger("Hit");
+            renderer.color = Color.gray;
             yield return wait;
-            transform.localScale = new Vector3(13, 13, 1);
+            
             renderer.color = new Color(1, 1, 1);
            
         }
