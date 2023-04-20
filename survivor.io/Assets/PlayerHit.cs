@@ -6,18 +6,8 @@ public class PlayerHit : MonoBehaviour
 {
     public PlayerData playerData;
     private Monster monster;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(playerData.Hp);
-    }
-
+   
+   
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(!collision.CompareTag("Monster"))
