@@ -16,8 +16,9 @@ public class Monster : MonoBehaviour
     public int monsterHealth;
     public Collider2D coll;
     public float hitreact;
+    private Color defaultColor;
    
-   
+
 
     private void Awake()
     {
@@ -33,6 +34,8 @@ public class Monster : MonoBehaviour
         wait = new WaitForSeconds(0.2f);
         isDead = data.isDead;
         monsterHealth = data.Hp;
+        defaultColor = new Color(1, 1, 1);
+       
     }
     public void SetPool(IObjectPool<Monster> pool)
     {
@@ -55,14 +58,7 @@ public class Monster : MonoBehaviour
 
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (!collision.CompareTag("Weapon"))
-            return;
-
-       
-        
-    }
+ 
 
     IEnumerator TakeDamage()
     {
@@ -73,7 +69,7 @@ public class Monster : MonoBehaviour
             renderer.color = Color.gray;
             yield return wait;
             
-            renderer.color = new Color(1, 1, 1);
+            renderer.color = defaultColor;
            
         }
         else
@@ -94,9 +90,10 @@ public class Monster : MonoBehaviour
             isDead = true;
         }
 
-        yield return new WaitForSeconds(1f); ;
+        yield return new WaitForSeconds(0.8f); ;
 
         Ondead();
         
     }
+    
 }

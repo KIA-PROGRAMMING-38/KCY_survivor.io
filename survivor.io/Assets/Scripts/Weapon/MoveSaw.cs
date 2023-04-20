@@ -14,7 +14,7 @@ public class MoveSaw : MonoBehaviour
     }
     void Update()
     {
-        transform.RotateAround(WeaponManager.Instance.weaponPos.transform.position, Vector3.back, angleSpeed);
-        transform.Rotate(rotateVec, rotateSpeed);
+        transform.RotateAround(WeaponManager.Instance.weaponPos.transform.position, Vector3.back, angleSpeed * Time.timeScale);
+        transform.Rotate(rotateVec, rotateSpeed * Time.timeScale );
     }
 }

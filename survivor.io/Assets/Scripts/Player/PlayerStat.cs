@@ -23,11 +23,9 @@ public class PlayerStat : MonoBehaviour
 
        if (data.currentExp > data.maxExp)
         {
-            data.LevelUp();
+            eventManager.playerLevelUp.Invoke();
         }
-        Debug.Log($"현재 레벨 : {data.Level}");
-        Debug.Log($"현재 경험치 : {data.currentExp}");
-        Debug.Log($"다음 레벨업 까지 :{data.maxExp}");
+      
     }
 
     public void OnDead()

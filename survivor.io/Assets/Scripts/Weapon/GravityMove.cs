@@ -18,9 +18,9 @@ public class GravityMove : MonoBehaviour
  
     private void Update()
     {
-        childTransforms[1].Rotate(0, 0, angleSpeed);
-        childTransforms[2].Rotate(0, 0, -angleSpeed);
-        childTransforms[3].Rotate(0, 0, angleSpeed);
+        childTransforms[1].Rotate(0, 0, angleSpeed * Time.timeScale);
+        childTransforms[2].Rotate(0, 0, -angleSpeed * Time.timeScale);
+        childTransforms[3].Rotate(0, 0, angleSpeed * Time.timeScale);
        
     }
 
