@@ -20,7 +20,7 @@ public class AcquiredItem : MonoBehaviour
         item = collision.GetComponent<Item>();
         rigid = collision.GetComponent<Rigidbody2D>();
         playerData.currentExp += item.AddExp;
-        item.item1Pool.Release(item);
+        item.itemPool.Release(item);
         
     }
 }

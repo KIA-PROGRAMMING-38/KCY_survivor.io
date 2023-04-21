@@ -16,5 +16,5 @@ MonoBehaviour:
   Atk: 3
   Level: 2
   isDead: 0
-  currentExp: 50
-  maxExp: 130
+  currentExp: 10
+  maxExp: 39

@@ -238,5 +238,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab:
   - {fileID: -4784726230343807222, guid: 55f401ce4c03c2a4c9b36c06ece00b3a, type: 3}
+  - {fileID: -4784726230343807222, guid: 5cb1c1dd96f49bd4190f3f8ed24fb17c, type: 3}
+  - {fileID: -4784726230343807222, guid: 55f401ce4c03c2a4c9b36c06ece00b3a, type: 3}
   - {fileID: -355402498706131950, guid: bc5d9c2d5c15c204198c218735f59bdf, type: 3}
-  - {fileID: -2038204218815552761, guid: 4220593ccc43bbf4cadaee5aee46d876, type: 3}

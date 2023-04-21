@@ -7,7 +7,7 @@ public class Item : MonoBehaviour
 {
     public int AddExp;
     public ItemData itemData;
-    public IObjectPool<Item> item1Pool;
+    public IObjectPool<Item> itemPool;
 
     private void Start()
     {
@@ -16,12 +16,12 @@ public class Item : MonoBehaviour
 
     public void SetPool(IObjectPool<Item> pool)
     {
-        item1Pool = pool;
+        itemPool = pool;
     }
 
     public void Ondead()
     {
-        item1Pool.Release(this);
+        itemPool.Release(this);
     }
 
     

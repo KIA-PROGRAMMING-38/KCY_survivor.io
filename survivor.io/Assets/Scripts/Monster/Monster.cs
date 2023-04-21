@@ -15,7 +15,6 @@ public class Monster : MonoBehaviour
     public Rigidbody2D rigid;
     public int monsterHealth;
     public Collider2D coll;
-    public float hitreact;
     private Color defaultColor;
    
 
