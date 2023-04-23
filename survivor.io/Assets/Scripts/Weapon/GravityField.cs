@@ -8,6 +8,7 @@ public class GravityField : MonoBehaviour, IWeapon
     private static List<Monster>  monster;
     private float elapsedTime;
     public WeaponData gravityData;
+    private GravityField gravityField;
     public void Attack()
     {
         if (monster == null)
@@ -15,9 +16,9 @@ public class GravityField : MonoBehaviour, IWeapon
             monster = new List<Monster>();
         }
        
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (!gravityField)
         {
-            Instantiate(this, WeaponManager.Instance.weaponPos.transform);
+            gravityField = Instantiate(this, WeaponManager.Instance.weaponPos.transform);
         }
         elapsedTime += Time.deltaTime;
     }

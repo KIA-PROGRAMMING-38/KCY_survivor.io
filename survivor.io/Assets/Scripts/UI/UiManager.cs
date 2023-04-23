@@ -9,4 +9,10 @@ public class UiManager : MonoBehaviour
         Time.timeScale = 0;
         gameObject.SetActive(true);
     }
+
+    public void ReStart()
+    {
+        Time.timeScale = 1;
+        gameObject.SetActive(false);
+    }
 }

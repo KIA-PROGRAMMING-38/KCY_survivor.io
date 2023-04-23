@@ -115,7 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb0bfed8bfffeae4a862c54a7271db28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 5
   radius: 15
   sawData: {fileID: 11400000, guid: 03c494620c82f88419f87129c07c989f, type: 2}
 --- !u!114 &5323374237841606505
@@ -132,3 +131,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angleSpeed: 1
   rotateSpeed: 1
+  sawData: {fileID: 11400000, guid: 03c494620c82f88419f87129c07c989f, type: 2}

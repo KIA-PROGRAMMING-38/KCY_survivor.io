@@ -7,7 +7,9 @@ public class MoveSaw : MonoBehaviour
     public float angleSpeed;
     public float rotateSpeed;
     private Vector3 rotateVec;
+    public WeaponData sawData;
 
+   
     private void Start()
     {
         rotateVec = new Vector3 (0,0, -rotateSpeed);
