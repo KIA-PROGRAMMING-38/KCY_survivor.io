@@ -117,4 +117,4 @@ MonoBehaviour:
   radius: 17
   sawData: {fileID: 11400000, guid: 03c494620c82f88419f87129c07c989f, type: 2}
   angleSpeed: 1
-  rotateSpeed: -1
+  rotateSpeed: -2

@@ -9,6 +9,7 @@ public class AcquiredItem : MonoBehaviour
     private Item item;
     public PlayerData playerData;
     public Rigidbody2D rigid;
+    public EventManager eventManager;
   
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,6 +22,11 @@ public class AcquiredItem : MonoBehaviour
         rigid = collision.GetComponent<Rigidbody2D>();
         playerData.currentExp += item.AddExp;
         item.itemPool.Release(item);
+
+        if (playerData.currentExp >= playerData.maxExp)
+        {
+            eventManager.playerLevelUp.Invoke();
+        }
         
     }
 }

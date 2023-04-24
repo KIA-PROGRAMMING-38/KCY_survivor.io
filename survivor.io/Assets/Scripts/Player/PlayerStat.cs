@@ -13,20 +13,7 @@ public class PlayerStat : MonoBehaviour
         data.Init();
       
     }
-    private void Update()
-    {
-       
-       if (data.Hp <= 0)
-        {
-           //eventManager.playerDead.Invoke();
-        }
-
-       if (data.currentExp > data.maxExp)
-        {
-            eventManager.playerLevelUp.Invoke();
-        }
-      
-    }
+  
 
     public void OnDead()
     {

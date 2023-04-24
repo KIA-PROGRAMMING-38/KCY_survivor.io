@@ -18,7 +18,7 @@ public class PlayerData : ScriptableObject
         Level = 1;
         isDead = false;
         currentExp = 0;
-        maxExp = 10;
+        maxExp = 100;
     }
 
     public void LevelUp()
