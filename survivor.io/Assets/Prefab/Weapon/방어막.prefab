@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: -7628231959732292656}
   - component: {fileID: 4304380918697958973}
   m_Layer: 0
-  m_Name: Gravity
+  m_Name: "\uBC29\uC5B4\uB9C9"
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

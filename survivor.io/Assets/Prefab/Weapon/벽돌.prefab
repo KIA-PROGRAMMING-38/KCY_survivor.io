@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -9185759268847474453}
   - component: {fileID: 6948927578273860672}
   m_Layer: 0
-  m_Name: Brick
+  m_Name: "\uBCBD\uB3CC"
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
