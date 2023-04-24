@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4127268519159831472}
   - component: {fileID: -9185759268847474453}
   - component: {fileID: 6948927578273860672}
+  - component: {fileID: -1925139779685122478}
   m_Layer: 0
   m_Name: "\uBCBD\uB3CC"
   m_TagString: Weapon
@@ -148,3 +149,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 60
   brickData: {fileID: 11400000, guid: 37c8f6ec8ce24484da7f9b1e1e49477b, type: 2}
+--- !u!114 &-1925139779685122478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2159101997945258322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376fbc6ad19491d4ea4ac7cccf986c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponText: {fileID: 11400000, guid: 37c8f6ec8ce24484da7f9b1e1e49477b, type: 2}
