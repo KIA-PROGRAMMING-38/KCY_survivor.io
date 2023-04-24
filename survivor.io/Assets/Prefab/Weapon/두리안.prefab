@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7923148652247515707}
   - component: {fileID: 4365419170518866542}
   - component: {fileID: 3216771001527259847}
+  - component: {fileID: -2453614602784191684}
   m_Layer: 0
   m_Name: "\uB450\uB9AC\uC548"
   m_TagString: Weapon
@@ -152,3 +153,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 60
   angleSpeed: -100
+--- !u!114 &-2453614602784191684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928677017079380359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376fbc6ad19491d4ea4ac7cccf986c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponText: {fileID: 11400000, guid: 3857e9a509ede9d4f81ac8846281020e, type: 2}
