@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 176c4e75af1fd6a47a8055ea26b57838, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: Assembly-CSharp::NewBehaviourScript
-  Hp: 100
+  Hp: 200
   Atk: 3
-  Level: 1
+  Level: 2
   isDead: 0
+  currentExp: 10
+  maxExp: 39

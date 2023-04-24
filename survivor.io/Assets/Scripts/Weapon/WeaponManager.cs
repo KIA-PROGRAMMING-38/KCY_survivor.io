@@ -42,6 +42,7 @@ public class WeaponManager
         currentWeapon = weapon.GetComponent<IWeapon>();
         weapons.Add(weapon.name, InputWeaponId);
         strategy[InputWeaponId].SetWeapon(currentWeapon);
+        strategy[InputWeaponId].Attack();
         InputWeaponId++;
     }
 }

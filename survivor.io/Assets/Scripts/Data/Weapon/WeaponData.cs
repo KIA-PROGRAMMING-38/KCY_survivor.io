@@ -7,4 +7,5 @@ public class WeaponData : ScriptableObject
 {
     public int Atk;
     public int Level;
+
 }

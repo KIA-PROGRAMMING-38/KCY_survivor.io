@@ -6,27 +6,14 @@ public class Attack : MonoBehaviour
 {
   
     public GameObject defaultWeapon;
-    public GameObject secondWeapon;
-    public GameObject thirdWeapon;
-    public GameObject fourthWeapon;
-   
-    void Start()
+
+    private void Awake()
     {
         WeaponManager.Instance.Init();
-        WeaponManager.Instance.Registration(defaultWeapon);
-        WeaponManager.Instance.Registration(secondWeapon);
-        WeaponManager.Instance.Registration(thirdWeapon);
-        WeaponManager.Instance.Registration(fourthWeapon);
+        
     }
-
-    
-    void Update()
+    void Start()
     {
-        for (int i = 0; i < WeaponManager.Instance.weapons.Count; i++)
-        {
-            WeaponManager.Instance.strategy[i].Attack();
-        }
+        WeaponManager.Instance.Registration(defaultWeapon);
     }
-
-
 }

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62a9589a93501840b69af88ffeb8d16, type: 3}
+  m_Name: AbleWeapon(Stage1)
+  m_EditorClassIdentifier: 
+  ableWeapons:
+  - {fileID: 6196327142524278498, guid: 95b451088ad38254ca8dd3f2305b46f1, type: 3}
+  - {fileID: 928677017079380359, guid: a32a3843f4c91e54b8e06372c09a5d9e, type: 3}
+  - {fileID: 2159101997945258322, guid: 202b1f85095ea6347895489415724d8e, type: 3}
+  - {fileID: 8677575359828983489, guid: 564766dc5d5aa5c499f95b81eceaa49c, type: 3}
+  - {fileID: 1214319136903887294, guid: 706b3467c6799664c9e76d246881f82d, type: 3}

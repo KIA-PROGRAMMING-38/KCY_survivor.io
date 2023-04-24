@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 739682956061791318}
   - component: {fileID: 350348778996626215}
   - component: {fileID: 7419465301370486116}
-  - component: {fileID: 5323374237841606505}
   m_Layer: 0
   m_Name: RotationSaw
   m_TagString: Weapon
@@ -115,20 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb0bfed8bfffeae4a862c54a7271db28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 5
-  radius: 15
+  radius: 17
   sawData: {fileID: 11400000, guid: 03c494620c82f88419f87129c07c989f, type: 2}
---- !u!114 &5323374237841606505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6196327142524278498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b0e86a9599f1c14ab60d6c16b99ab89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   angleSpeed: 1
-  rotateSpeed: 1
+  rotateSpeed: -1

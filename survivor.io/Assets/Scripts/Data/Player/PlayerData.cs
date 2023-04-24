@@ -9,7 +9,8 @@ public class PlayerData : ScriptableObject
     public int Atk;
     public int Level;
     public bool isDead;
-    public int currentExp;
+    public float currentExp;
+    public float maxExp;
 
     public void Init()
     {
@@ -17,5 +18,14 @@ public class PlayerData : ScriptableObject
         Level = 1;
         isDead = false;
         currentExp = 0;
+        maxExp = 10;
+    }
+
+    public void LevelUp()
+    {
+        Hp = 200;
+        Level++;
+        currentExp = currentExp - maxExp;
+        maxExp = maxExp * 1.3f;
     }
 }

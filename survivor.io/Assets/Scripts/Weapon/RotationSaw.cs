@@ -4,28 +4,34 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class RotationSaw : MonoBehaviour, IWeapon
+public class RotationSaw : MonoBehaviour, IWeapon, ILevelup
 {
-    private Vector3 movePos;
+    private Vector3 rotateVec;
     public float radius;
     private Monster monster;
     public WeaponData sawData;
+    public float angleSpeed;
+    public float rotateSpeed;
+    private GameObject saw;
+    private float elapsedTime;
 
-  
     public void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            float angle = Mathf.PI * 2;
-            for (int i = 1; i <= sawData.Level + 1; i ++)
-            {
-                movePos = new Vector3(Mathf.Cos(angle / (sawData.Level + 1) * i),
-               Mathf.Sin(angle / (sawData.Level + 1) * i)).normalized;
-                Instantiate(this, WeaponManager.Instance.weaponPos.transform).transform.position += movePos * radius;
-
-            }
-        }
+        saw = GameObject.Find("WeaponPos").transform.Find("SawPos").gameObject;
+        saw.SetActive(true);
     }
+    private void Start()
+    {
+        rotateVec = new Vector3(0, 0, 1);
+       
+    }
+    void Update()
+    {
+        transform.RotateAround(WeaponManager.Instance.weaponPos.transform.position, Vector3.back, angleSpeed * Time.timeScale);
+        transform.Rotate(rotateVec, rotateSpeed * Time.timeScale);
+        elapsedTime += Time.deltaTime;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Monster"))
@@ -34,4 +40,13 @@ public class RotationSaw : MonoBehaviour, IWeapon
         monster = collision.gameObject.GetComponent<Monster>();
         monster.monsterHealth -= sawData.Atk;
     }
+
+    public void LevelUp()
+    {
+        sawData.Level++;
+        saw.SetActive(false);
+        saw.SetActive(true);
+    }
+
+  
 }

@@ -8,14 +8,13 @@ public class Durian : MonoBehaviour, IWeapon
 {
     private Monster monster;
     public WeaponData durianStat;
+    private Durian durian;
     public void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (durian == null)
         {
-            Instantiate(this, WeaponManager.Instance.weaponPos.transform);
-            
-        }
-      
+            durian = Instantiate(this, WeaponManager.Instance.weaponPos.transform);
+        }  
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
