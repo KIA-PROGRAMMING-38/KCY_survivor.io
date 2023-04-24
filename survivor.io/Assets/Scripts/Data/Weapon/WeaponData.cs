@@ -7,5 +7,6 @@ public class WeaponData : ScriptableObject
 {
     public int Atk;
     public int Level;
+    public string[] levelupText = new string[5];
 
 }

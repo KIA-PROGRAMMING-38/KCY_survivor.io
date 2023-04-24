@@ -28,7 +28,6 @@ public class SelectWeapon : MonoBehaviour
         weaponImage.sprite = ableWeaponsData.ableWeapons[weaponIndex].GetComponent<SpriteRenderer>().sprite;
         weaponName.text = saveWeapon.name;
         ableWeaponsData.ableWeapons.Remove(saveWeapon);
-        
     }
 
     private void OnDisable()
