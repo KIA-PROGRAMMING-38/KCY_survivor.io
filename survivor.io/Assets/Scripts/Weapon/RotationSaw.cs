@@ -47,6 +47,4 @@ public class RotationSaw : MonoBehaviour, IWeapon, ILevelup
         saw.SetActive(false);
         saw.SetActive(true);
     }
-
-  
 }
