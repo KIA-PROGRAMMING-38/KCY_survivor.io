@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ExpBar : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Image myImage;
+    public PlayerData playerData;
+
+    private void Awake()
+    {
+        myImage = GetComponent<Image>();
+    }
     void Start()
     {
-        
+        StartCoroutine(FillingBar());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator FillingBar()
     {
-        
+        while (true)
+        {
+            myImage.fillAmount = playerData.currentExp / playerData.maxExp;
+            yield return null;
+        }
     }
 }
