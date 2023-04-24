@@ -15,7 +15,7 @@ public class GravitySpawn : MonoBehaviour
     }
     private void Start()
     {
-        weaponData.Atk = 10;
+        weaponData.Atk = 1;
         weaponData.Level = 1;
     }
     private void OnEnable()

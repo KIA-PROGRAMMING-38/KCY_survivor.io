@@ -26,6 +26,7 @@ public class GravityField : MonoBehaviour, IWeapon, ILevelup
     private void Start()
     {
         monster = new List<Monster>();
+        StartCoroutine(takeDamage());
      
     }
 
@@ -42,7 +43,6 @@ public class GravityField : MonoBehaviour, IWeapon, ILevelup
             return;
 
         monster.Add(collision.GetComponent<Monster>());
-        StartCoroutine(takeDamage());
     }
 
     
