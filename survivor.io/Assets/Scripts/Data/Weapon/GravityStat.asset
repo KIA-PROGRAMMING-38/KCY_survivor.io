@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d179b78da9d9394fbc07af5755fbf54, type: 3}
   m_Name: GravityStat
   m_EditorClassIdentifier: 
-  Atk: 1
-  Level: 1
+  Atk: 10
+  Level: 5

@@ -11,6 +11,8 @@ public class BrickSpawn : MonoBehaviour
     public Brick brick;
     public WeaponData brickdata;
     private ObjectPool<Brick> brickPool;
+    private WaitForSeconds instantCoolTime;
+    private WaitForSeconds coolTime;
     private void Awake()
     {
         brickPool = new ObjectPool<Brick>(
@@ -19,9 +21,14 @@ public class BrickSpawn : MonoBehaviour
             OnRelease,
             OnDestroyPoolObject,
             maxSize: 10);
+
+        brickdata.Atk = 1;
+        brickdata.Level = 1;
     }
     private void Start()
     {
+        instantCoolTime = new WaitForSeconds(0.3f);
+        coolTime = new WaitForSeconds(3.0f);
         StartCoroutine(brickAttack());
     }
 
@@ -55,21 +62,11 @@ public class BrickSpawn : MonoBehaviour
             for (int i = 0; i < brickdata.Level; i++)
             {
                 brickPool.Get();
-                yield return new WaitForSeconds(0.3f);
+                yield return instantCoolTime;
             }
-            yield return new WaitForSeconds(3f);
+            yield return coolTime;
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
+   
 }

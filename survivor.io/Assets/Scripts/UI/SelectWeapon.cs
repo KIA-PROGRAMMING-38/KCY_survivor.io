@@ -35,8 +35,7 @@ public class SelectWeapon : MonoBehaviour
     {
         if (WeaponManager.Instance.weapons.ContainsKey(saveWeapon.name))
         {
-            Debug.Log($"{saveWeapon.name} ·¹º§ ¾÷");
-            
+            saveWeapon.GetComponent<ILevelup>().LevelUp();
         }
         else
         {

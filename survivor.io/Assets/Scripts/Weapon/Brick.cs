@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Pool;
 
 
-public class Brick : MonoBehaviour, IWeapon
+public class Brick : MonoBehaviour, IWeapon, ILevelup
 {
     private Rigidbody2D rigid;
     public float power;
@@ -17,12 +17,11 @@ public class Brick : MonoBehaviour, IWeapon
     public WeaponData brickData;
     public IObjectPool<Brick> brickPool;
    
-    // Start is called before the first frame update
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
     }
-
+  
     public void SetPool(IObjectPool<Brick> pool)
     {
         brickPool = pool;
@@ -61,6 +60,11 @@ public class Brick : MonoBehaviour, IWeapon
     public void Attack()
     {
         GameObject.Find("WeaponPos").transform.Find("brickPos").gameObject.SetActive(true);
+    }
+
+    public void LevelUp()
+    {
+        brickData.Level++;
     }
 }
 
