@@ -23,7 +23,6 @@ public class PlayerData : ScriptableObject
 
     public void LevelUp()
     {
-        Hp = 200;
         Level++;
         currentExp = currentExp - maxExp;
         maxExp = maxExp * 1.3f;

@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ExpBar : MonoBehaviour
+public class HpBar : MonoBehaviour
 {
-    public Image expImage;
-    public PlayerData playerData; // 플레이어 경험치정보
-  
-
+    public Image hpBar;
+    public PlayerData playerData;
+    private float maxHp;
+    // Start is called before the first frame update
     void Start()
     {
+        maxHp = playerData.Hp;
         StartCoroutine(FillingBar());
     }
 
@@ -18,8 +19,9 @@ public class ExpBar : MonoBehaviour
     {
         while (true)
         {
-            expImage.fillAmount = playerData.currentExp / playerData.maxExp;
+            hpBar.fillAmount = playerData.Hp / maxHp;
             yield return null;
         }
     }
+   
 }

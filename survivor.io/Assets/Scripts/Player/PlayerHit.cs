@@ -6,6 +6,7 @@ public class PlayerHit : MonoBehaviour
 {
     public PlayerData playerData;
     private Monster monster;
+    public EventManager eventManager;
    
    
     private void OnTriggerStay2D(Collider2D collision)
@@ -16,5 +17,10 @@ public class PlayerHit : MonoBehaviour
         }
         monster = collision.GetComponent<Monster>();
         playerData.Hp -= monster.data.Atk;
+
+        if (playerData.Hp <= 0)
+        {
+            eventManager.playerDead.Invoke();
+        }
     }
 }
