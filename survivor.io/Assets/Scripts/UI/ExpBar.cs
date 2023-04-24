@@ -5,13 +5,10 @@ using UnityEngine.UI;
 
 public class ExpBar : MonoBehaviour
 {
-    private Image myImage;
-    public PlayerData playerData;
+    public Image expImage;
+    public PlayerData playerData; // 플레이어 경험치정보
+  
 
-    private void Awake()
-    {
-        myImage = GetComponent<Image>();
-    }
     void Start()
     {
         StartCoroutine(FillingBar());
@@ -21,7 +18,7 @@ public class ExpBar : MonoBehaviour
     {
         while (true)
         {
-            myImage.fillAmount = playerData.currentExp / playerData.maxExp;
+            expImage.fillAmount = playerData.currentExp / playerData.maxExp;
             yield return null;
         }
     }
