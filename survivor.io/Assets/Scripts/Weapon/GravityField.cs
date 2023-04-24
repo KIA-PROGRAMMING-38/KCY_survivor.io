@@ -20,13 +20,13 @@ public class GravityField : MonoBehaviour, IWeapon, ILevelup
     private void Awake()
     {
         childTransforms = GetComponentsInChildren<Transform>();
-        coolTime = new WaitForSeconds(0.5f);
+        coolTime = new WaitForSeconds(0.3f);
     }
 
     private void Start()
     {
         monster = new List<Monster>();
-     
+        StartCoroutine(takeDamage());
     }
 
     private void Update()
@@ -42,7 +42,7 @@ public class GravityField : MonoBehaviour, IWeapon, ILevelup
             return;
 
         monster.Add(collision.GetComponent<Monster>());
-        StartCoroutine(takeDamage());
+       
     }
 
     

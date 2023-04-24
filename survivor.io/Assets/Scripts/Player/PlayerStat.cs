@@ -18,7 +18,7 @@ public class PlayerStat : MonoBehaviour
        
        if (data.Hp <= 0)
         {
-            eventManager.playerDead.Invoke();
+           //eventManager.playerDead.Invoke();
         }
 
        if (data.currentExp > data.maxExp)

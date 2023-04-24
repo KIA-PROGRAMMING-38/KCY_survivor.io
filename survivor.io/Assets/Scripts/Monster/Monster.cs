@@ -10,7 +10,8 @@ public class Monster : MonoBehaviour
     public MonsterData data;
     private new SpriteRenderer renderer;
     private Animator animator;
-    private WaitForSeconds wait;
+    private WaitForSeconds waitEnter;
+    private WaitForSeconds waitStay;
     public bool isDead;
     public Rigidbody2D rigid;
     public int monsterHealth;
@@ -30,7 +31,8 @@ public class Monster : MonoBehaviour
     
     private void Start()
     {
-        wait = new WaitForSeconds(0.2f);
+        waitEnter = new WaitForSeconds(0.2f);
+        waitStay = new WaitForSeconds(1f);
         isDead = data.isDead;
         monsterHealth = data.Hp;
         defaultColor = new Color(1, 1, 1);
@@ -52,21 +54,30 @@ public class Monster : MonoBehaviour
         if (!collision.CompareTag("Weapon"))
             return;
         
-        StartCoroutine(TakeDamage());
+        StartCoroutine(TakeDamageEnter());
         
 
     }
 
- 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Weapon"))
+            return;
 
-    IEnumerator TakeDamage()
+        StartCoroutine(TakeDamageStay());
+
+    }
+
+
+
+    IEnumerator TakeDamageEnter()
     {
         if (monsterHealth >= 0)
         {
 
             animator.SetTrigger("Hit");
             renderer.color = Color.gray;
-            yield return wait;
+            yield return waitEnter;
             
             renderer.color = defaultColor;
            
@@ -80,6 +91,27 @@ public class Monster : MonoBehaviour
 
         }
     }
+
+    IEnumerator TakeDamageStay()
+    {
+        if (monsterHealth >= 0)
+        {
+            renderer.color = Color.gray;
+            yield return waitStay;
+
+            renderer.color = defaultColor;
+
+        }
+        else
+        {
+
+            coll.isTrigger = true;
+            rigid.constraints = RigidbodyConstraints2D.FreezeAll;
+            StartCoroutine(DeadAction());
+        }
+    }
+
+
 
     IEnumerator DeadAction()
     {
