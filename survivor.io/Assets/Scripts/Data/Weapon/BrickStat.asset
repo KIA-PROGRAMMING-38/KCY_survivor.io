@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d179b78da9d9394fbc07af5755fbf54, type: 3}
   m_Name: BrickStat
   m_EditorClassIdentifier: 
-  Atk: 3
+  Atk: 1
   Level: 1
+  levelupText:
+  - "\uBCBD\uB3CC 1\uAC1C \uD22C\uCC99"
+  - "\uBCBD\uB3CC 1\uAC1C \uCD94\uAC00\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
+  - "\uBCBD\uB3CC 1\uAC1C \uCD94\uAC00\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
+  - "\uBCBD\uB3CC 1\uAC1C \uCD94\uAC00\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
+  - "\uBCBD\uB3CC 1\uAC1C \uCD94\uAC00\n\uD53C\uD574\uB7C9 \uC99D\uAC00"

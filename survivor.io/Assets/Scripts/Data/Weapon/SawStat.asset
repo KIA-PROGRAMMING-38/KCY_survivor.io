@@ -12,5 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d179b78da9d9394fbc07af5755fbf54, type: 3}
   m_Name: SawStat
   m_EditorClassIdentifier: 
-  Atk: 10
-  Level: 1
+  Atk: 1
+  Level: 2
+  levelupText:
+  - "\uC8FC\uC704\uB97C \uD68C\uC804\uD558\uB294 \uC218\uD638\uC790 \n\uD33D\uC774
+    2\uAC1C\uB97C \uC18C\uD658"
+  - "\uD33D\uC774 1\uAC1C \uCD94\uAC00\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
+  - "\uD33D\uC774 1\uAC1C \uCD94\uAC00\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
+  - "\uD33D\uC774 1\uAC1C \uCD94\uAC00\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
+  - "\uD33D\uC774 1\uAC1C \uCD94\uAC00\n\uD53C\uD574\uB7C9 \uC99D\uAC00"

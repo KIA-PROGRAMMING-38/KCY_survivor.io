@@ -18,6 +18,7 @@ public class Monster : MonoBehaviour
     public int monsterHealth;
     public Collider2D coll;
     private Color defaultColor;
+    private ItemPool itemPool;
    
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class Monster : MonoBehaviour
         animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
+        itemPool = GetComponentInChildren<ItemPool>();
     }
 
     
@@ -100,16 +102,18 @@ public class Monster : MonoBehaviour
 
     IEnumerator DeadAction()
     {
+        renderer.color = Color.gray;
+        yield return waitStay;
+        renderer.color = defaultColor;
         if (!isDead)
         {
+            
             animator.SetTrigger("Dead");
             isDead = true;
         }
 
         yield return deadAction;
-
+        itemPool.DropItem();
         Ondead();
-        
     }
-    
 }

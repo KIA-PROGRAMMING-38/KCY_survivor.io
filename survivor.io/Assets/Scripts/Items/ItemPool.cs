@@ -47,11 +47,12 @@ public class ItemPool : MonoBehaviour
         Destroy(item.gameObject);
     }
 
-    private void OnDisable()
+
+    public void DropItem()
     {
         spawnPer = UnityEngine.Random.Range(0, 10);
 
-        if (spawnPer >= 3)
+        if (spawnPer >= 2)
         {
             itemPool.Get();
         }

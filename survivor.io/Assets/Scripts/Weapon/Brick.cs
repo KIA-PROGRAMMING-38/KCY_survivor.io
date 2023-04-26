@@ -16,6 +16,7 @@ public class Brick : MonoBehaviour, IWeapon, ILevelup
     private Monster monster;
     public WeaponData brickData;
     public IObjectPool<Brick> brickPool;
+    
    
     private void Awake()
     {
@@ -42,7 +43,9 @@ public class Brick : MonoBehaviour, IWeapon, ILevelup
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Monster"))
+        {
             return;
+        }
 
         monster = collision.gameObject.GetComponent<Monster>();
         monster.monsterHealth -= brickData.Atk;
@@ -59,7 +62,7 @@ public class Brick : MonoBehaviour, IWeapon, ILevelup
 
     public void Attack()
     {
-        GameObject.Find("WeaponPos").transform.Find("brickPos").gameObject.SetActive(true);
+        GameObject.FindWithTag("WeaponPos").transform.Find("brickPos").gameObject.SetActive(true);
     }
 
     public void LevelUp()
