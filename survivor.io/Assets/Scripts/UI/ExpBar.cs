@@ -8,8 +8,8 @@ public class ExpBar : MonoBehaviour
 {
     public Image expImage;
     public PlayerData playerData; // 플레이어 경험치정보
-    public TMP_Text Mainlevel;
-    public TMP_Text UpUILevel;
+    public TMP_Text Mainlevel; // 메인 UI 레벨 표시 창
+    public TMP_Text UpUILevel; // 레벨 업 UI 레벨 표시 창
   
 
     void Start()
