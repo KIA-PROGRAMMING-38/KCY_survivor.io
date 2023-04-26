@@ -137,7 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b80c66f44142e4b4db7f9fb5eb7a5a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  daggerData: {fileID: 11400000, guid: e3409f25d04eafa428f67aff03954f16, type: 2}
+  speed: 80
+  rotatePow: 1000
 --- !u!114 &-5005671334954086531
 MonoBehaviour:
   m_ObjectHideFlags: 0

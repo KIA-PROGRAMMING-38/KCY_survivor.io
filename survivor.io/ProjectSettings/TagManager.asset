@@ -14,6 +14,7 @@ TagManager:
   - Weapon
   - Item
   - Acquired
+  - WeaponPos
   layers:
   - Default
   - TransparentFX

@@ -17,7 +17,7 @@ public class RotationSaw : MonoBehaviour, IWeapon, ILevelup
 
     public void Attack()
     {
-        saw = GameObject.Find("WeaponPos").transform.Find("SawPos").gameObject;
+        saw = GameObject.FindWithTag("WeaponPos").transform.Find("SawPos").gameObject;
         saw.SetActive(true);
     }
     private void Start()

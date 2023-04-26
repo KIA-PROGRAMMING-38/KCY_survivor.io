@@ -14,7 +14,7 @@ public class GravityField : MonoBehaviour, IWeapon, ILevelup
     public float levelUpSize;
     public void Attack()
     {
-        gravity = GameObject.Find("WeaponPos").transform.Find("GravityPos").gameObject;
+        gravity = GameObject.FindWithTag("WeaponPos").transform.Find("GravityPos").gameObject;
         gravity.SetActive(true);
     }
     private void Awake()

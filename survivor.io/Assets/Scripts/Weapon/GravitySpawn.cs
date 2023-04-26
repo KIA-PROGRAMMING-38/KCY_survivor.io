@@ -11,12 +11,9 @@ public class GravitySpawn : MonoBehaviour
     private void Awake()
     {
         gravityField.transform.localScale = new Vector3(0.5f, 0.5f, 0);
-        
-    }
-    private void Start()
-    {
         weaponData.Atk = 5;
         weaponData.Level = 1;
+
     }
     private void OnEnable()
     {

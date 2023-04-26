@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d179b78da9d9394fbc07af5755fbf54, type: 3}
   m_Name: GravityStat
   m_EditorClassIdentifier: 
-  Atk: 1
+  Atk: 5
   Level: 1
+  levelupText:
+  - "\uC801\uC744 \uC6A9\uD574\uC2DC\uD0A4\uB294 \n\uBC29\uC5B4\uB9C9\uC744 \uC0DD\uC131"
+  - "\uC601\uC5ED \uD655\uB300 \n\uD53C\uD574\uB7C9 \uC99D\uAC00"
+  - "\uC601\uC5ED \uD655\uB300 \n\uD53C\uD574\uB7C9 \uC99D\uAC00"
+  - "\uC601\uC5ED \uD655\uB300 \n\uD53C\uD574\uB7C9 \uC99D\uAC00"
+  - "\uC601\uC5ED \uD655\uB300 \n\uD53C\uD574\uB7C9 \uC99D\uAC00"

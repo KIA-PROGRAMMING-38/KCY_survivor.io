@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3990779161726660773}
   - component: {fileID: 7923148652247515707}
   - component: {fileID: 4365419170518866542}
-  - component: {fileID: 3216771001527259847}
   - component: {fileID: -2453614602784191684}
   m_Layer: 0
   m_Name: "\uB450\uB9AC\uC548"
@@ -31,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 928677017079380359}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 2.2, y: 2.2, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -138,21 +137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17d6a7c810a62a14588e834bfd7596cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durianStat: {fileID: 11400000, guid: 3857e9a509ede9d4f81ac8846281020e, type: 2}
---- !u!114 &3216771001527259847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 928677017079380359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30c88cbfa847e274dbd95d62b854cc12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  durianData: {fileID: 11400000, guid: 3857e9a509ede9d4f81ac8846281020e, type: 2}
   speed: 60
-  angleSpeed: -100
+  angleSpeed: 100
+  levelUpSize: 0.2
 --- !u!114 &-2453614602784191684
 MonoBehaviour:
   m_ObjectHideFlags: 0

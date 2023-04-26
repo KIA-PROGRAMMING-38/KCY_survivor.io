@@ -34,7 +34,7 @@ public class BrickSpawn : MonoBehaviour
 
     private Brick CreateBrick()
     {
-        Brick bricks = Instantiate(brick, WeaponManager.Instance.weaponPos.transform);
+        Brick bricks = Instantiate(brick, transform);
         bricks.SetPool(brickPool);
         return bricks;
     }
@@ -57,6 +57,7 @@ public class BrickSpawn : MonoBehaviour
 
     private IEnumerator brickAttack()
     {
+       
         while (true)
         {
             for (int i = 0; i < brickdata.Level; i++)
