@@ -20,6 +20,7 @@ public class SelectWeapon : MonoBehaviour
         weaponImage = transform.Find("WeaponImage").gameObject.GetComponent<Image>();
         weaponName = transform.Find("WeaponName").GetComponent<TMP_Text>();
         weaponLevelText = transform.Find("LevelUpText").GetComponent<TMP_Text>();
+    
     }
 
     private void Start()
