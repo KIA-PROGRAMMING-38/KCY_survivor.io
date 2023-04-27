@@ -102,9 +102,9 @@ public class Monster : MonoBehaviour
 
     IEnumerator DeadAction()
     {
-        renderer.color = Color.gray;
+
+        animator.SetTrigger("Hit");
         yield return waitStay;
-        renderer.color = defaultColor;
         if (!isDead)
         {
             
