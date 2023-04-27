@@ -50,7 +50,6 @@ public class DaggerSpawn : MonoBehaviour
     private void OnRelease(Dagger daggers)
     {
         daggers.gameObject.SetActive(false);
-        daggers.transform.position = releasePoint.position;
     }
 
     private void OnDestroyPoolObject(Dagger daggers)
