@@ -13,4 +13,6 @@ public class EventManager : MonoBehaviour
     public UnityEvent playerHpHalf;
 
     public UnityEvent playerHpLow;
+
+  
 }

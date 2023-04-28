@@ -19,6 +19,8 @@ public class Monster : MonoBehaviour
     public Collider2D coll;
     private Color defaultColor;
     private ItemPool itemPool;
+    public UIdata uiData;
+    
    
     private void Awake()
     {
@@ -38,6 +40,7 @@ public class Monster : MonoBehaviour
         isDead = data.isDead;
         monsterHealth = data.Hp;
         defaultColor = new Color(1, 1, 1);
+        
     }
     public void SetPool(IObjectPool<Monster> pool)
     {
@@ -114,6 +117,7 @@ public class Monster : MonoBehaviour
 
         yield return deadAction;
         itemPool.DropItem();
+        uiData.killCount++;
         Ondead();
     }
 }
