@@ -173,7 +173,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 4c1078b0cd3538041aa0c632f62367ff, type: 2}
   isDead: 0
+  rigid: {fileID: 0}
   monsterHealth: 0
+  coll: {fileID: 0}
+  uiData: {fileID: 11400000, guid: f274e335cc1674648aec6af2bf349e8c, type: 2}
 --- !u!70 &7476705862740057212
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

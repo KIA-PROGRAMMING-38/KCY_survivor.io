@@ -224,6 +224,7 @@ MonoBehaviour:
   rigid: {fileID: 0}
   monsterHealth: 0
   coll: {fileID: 0}
+  uiData: {fileID: 11400000, guid: f274e335cc1674648aec6af2bf349e8c, type: 2}
 --- !u!70 &5687153991277075652
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
