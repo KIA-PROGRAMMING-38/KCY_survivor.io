@@ -8,20 +8,24 @@ public class PlayerHit : MonoBehaviour
     public int maxHp;
     private Monster monster;
     public EventManager eventManager;
+    private ParticleSystem blood;
 
     private void Awake()
     {
         maxHp = playerData.Hp;
+        blood = GetComponentInChildren<ParticleSystem>();
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if(!collision.CompareTag("Monster"))
+        if(!collision.gameObject.CompareTag("Monster"))
         {
             return;
         }
-        monster = collision.GetComponent<Monster>();
+        monster = collision.gameObject.GetComponent<Monster>();
+       
         playerData.Hp -= monster.data.Atk;
+        
 
 
         if (playerData.Hp <= maxHp * 0.5f)
@@ -34,7 +38,43 @@ public class PlayerHit : MonoBehaviour
         }
         if (playerData.Hp <= 0)
         {
-            eventManager.playerDead.Invoke();
+           // eventManager.playerDead.Invoke();
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collision.gameObject.CompareTag("Monster"))
+        {
+            return;
+        }
+        blood.Play();
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (!collision.gameObject.CompareTag("Monster"))
+        {
+            return;
+        }
+        blood.Stop();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Monster"))
+        {
+            return;
+        }
+        blood.Stop();
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Monster"))
+        {
+            return;
+        }
+        blood.Stop();
     }
 }

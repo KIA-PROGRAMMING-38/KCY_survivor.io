@@ -22,7 +22,7 @@ public class DaggerSpawn : MonoBehaviour
             OnDestroyPoolObject,
             maxSize: 50);
 
-        daggerData.Atk = 10;
+        daggerData.Atk = 5;
         daggerData.Level = 1;
         
     }
