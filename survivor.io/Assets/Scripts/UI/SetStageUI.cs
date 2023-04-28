@@ -4,10 +4,11 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CountKill : MonoBehaviour
+public class SetStageUI : MonoBehaviour
 {
    
     public TMP_Text killCountText;
+    public TMP_Text goldCountText;
     public UIdata data;
 
     private void Awake()
@@ -23,6 +24,7 @@ public class CountKill : MonoBehaviour
         while (true)
         {
             killCountText.text = data.killCount.ToString();
+            goldCountText.text = data.stageGold.ToString();
             yield return null;
         }
     }
