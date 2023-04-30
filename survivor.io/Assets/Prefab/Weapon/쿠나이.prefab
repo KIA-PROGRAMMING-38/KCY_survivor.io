@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   daggerData: {fileID: 11400000, guid: e3409f25d04eafa428f67aff03954f16, type: 2}
+  playerData: {fileID: 11400000, guid: 585044753f5b47c4882b3ce3732ad114, type: 2}
   speed: 80
   rotatePow: 1000
 --- !u!114 &-5005671334954086531

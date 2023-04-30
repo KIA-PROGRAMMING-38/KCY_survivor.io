@@ -24,7 +24,7 @@ public class WeaponManager
     public Dictionary<string, int> weapons;  // weapon ID를 등록하기 위한 사전
     public GameObject weaponPos;
     IWeapon currentWeapon;
-    public int InputWeaponId = 0;
+    public int InputWeaponId;
     public void Init()
     {
         strategy = new WeaponStrategy[5];
@@ -36,6 +36,8 @@ public class WeaponManager
         weapons = new Dictionary<string, int>(); // 무기 Id를 저장할 컨테이너
 
         weaponPos = GameObject.Find("WeaponPos"); // 스폰 위치 찾기
+
+        InputWeaponId = 0;
     }
     public void Registration(GameObject weapon) // 무기 등록
     {

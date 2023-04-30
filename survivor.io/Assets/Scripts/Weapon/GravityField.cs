@@ -7,6 +7,7 @@ public class GravityField : MonoBehaviour, IWeapon, ILevelup
 {
     private static List<Monster> monster;
     public WeaponData gravityData;
+    public PlayerData playerData;
     private GameObject gravity;
     private Transform[] childTransforms;
     public float angleSpeed;
@@ -69,7 +70,7 @@ public class GravityField : MonoBehaviour, IWeapon, ILevelup
         {
             foreach (Monster monster in monster)
             {
-                monster.monsterHealth = monster.monsterHealth - gravityData.Atk;
+                monster.monsterHealth = monster.monsterHealth - gravityData.Atk * playerData.Atk;
             }
             yield return coolTime;
         }

@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityData: {fileID: 11400000, guid: 333ca7e030b3abb48b5d0d3ce6921735, type: 2}
+  playerData: {fileID: 11400000, guid: 585044753f5b47c4882b3ce3732ad114, type: 2}
   angleSpeed: 0.3
   levelUpSize: 0.1
 --- !u!212 &4304380918697958973

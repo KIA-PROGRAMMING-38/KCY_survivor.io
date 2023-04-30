@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d179b78da9d9394fbc07af5755fbf54, type: 3}
   m_Name: BrickStat
   m_EditorClassIdentifier: 
-  Atk: 1
+  Atk: 4
   Level: 1
   levelupText:
   - "\uBCBD\uB3CC 1\uAC1C \uD22C\uCC99"

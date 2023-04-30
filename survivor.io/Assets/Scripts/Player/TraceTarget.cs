@@ -6,7 +6,7 @@ public class TraceTarget : MonoBehaviour
 {
     public Rigidbody2D target;
     private Rigidbody2D rigid;
-    private new SpriteRenderer renderer;
+    private SpriteRenderer renderer;
     public float speed;
 
     void Awake()

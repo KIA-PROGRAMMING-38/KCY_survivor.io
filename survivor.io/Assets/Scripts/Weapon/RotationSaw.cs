@@ -10,6 +10,7 @@ public class RotationSaw : MonoBehaviour, IWeapon, ILevelup
     public float radius;
     private Monster monster;
     public WeaponData sawData;
+    public PlayerData playerData;
     public float angleSpeed;
     public float rotateSpeed;
     private GameObject saw;
@@ -38,7 +39,7 @@ public class RotationSaw : MonoBehaviour, IWeapon, ILevelup
             return;
 
         monster = collision.gameObject.GetComponent<Monster>();
-        monster.monsterHealth -= sawData.Atk;
+        monster.monsterHealth -= sawData.Atk * playerData.Atk;
     }
 
     public void LevelUp()

@@ -14,6 +14,7 @@ public class Dagger : MonoBehaviour ,IWeapon, ILevelup
     private Monster monster;
     private Transform target;
     public WeaponData daggerData;
+    public PlayerData playerData;
     public float speed;
     public IObjectPool<Dagger> daggerPool;
     private Transform myPos;
@@ -53,7 +54,7 @@ public class Dagger : MonoBehaviour ,IWeapon, ILevelup
             return;
         }
         monster = collision.GetComponent<Monster>();
-        monster.monsterHealth -= daggerData.Atk;
+        monster.monsterHealth -= daggerData.Atk * playerData.Atk;
 
         
     }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SawStat
   m_EditorClassIdentifier: 
   Atk: 1
-  Level: 2
+  Level: 3
   levelupText:
   - "\uC8FC\uC704\uB97C \uD68C\uC804\uD558\uB294 \uC218\uD638\uC790 \n\uD33D\uC774
     2\uAC1C\uB97C \uC18C\uD658"

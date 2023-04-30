@@ -10,13 +10,4 @@ public class PlayerStat : MonoBehaviour
     {
         data.Init();
     }
-  
-    public void OnDead()
-    {
-        Time.timeScale = 0;
-    }
-
-   
-    
-   
 }
