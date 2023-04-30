@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   durianData: {fileID: 11400000, guid: 3857e9a509ede9d4f81ac8846281020e, type: 2}
+  playerData: {fileID: 11400000, guid: 585044753f5b47c4882b3ce3732ad114, type: 2}
   speed: 60
   angleSpeed: 100
   levelUpSize: 0.2

@@ -38,7 +38,7 @@ public class PlayerHit : MonoBehaviour
         }
         if (playerData.Hp <= 0)
         {
-           // eventManager.playerDead.Invoke();
+            eventManager.playerDead.Invoke();
         }
     }
 

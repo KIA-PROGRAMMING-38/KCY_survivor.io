@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameTimer : MonoBehaviour
 {
     public TMP_Text timer;
+    public TMP_Text resultTimer;
     private int min;
     private float sec;
 
@@ -21,7 +22,9 @@ public class GameTimer : MonoBehaviour
         {
             sec += Time.deltaTime;
             timer.text = string.Format("{0:D2}:{1:D2}", min, (int)sec);
+            resultTimer.text = string.Format("{0:D2}:{1:D2}", min, (int)sec);
 
+            
             if (sec >= 60 )
             {
                 min++;
@@ -29,5 +32,10 @@ public class GameTimer : MonoBehaviour
             }
             yield return null;
         }
+    }
+
+    public void saveTime()
+    {
+
     }
 }

@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 60
   brickData: {fileID: 11400000, guid: 37c8f6ec8ce24484da7f9b1e1e49477b, type: 2}
+  playerData: {fileID: 11400000, guid: 585044753f5b47c4882b3ce3732ad114, type: 2}
 --- !u!114 &-1925139779685122478
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class SetStageUI : MonoBehaviour
 {
    
     public TMP_Text killCountText;
-    public TMP_Text goldCountText;
+    public TMP_Text resultKillCount;
     public UIdata data;
 
     private void Awake()
@@ -24,7 +24,7 @@ public class SetStageUI : MonoBehaviour
         while (true)
         {
             killCountText.text = data.killCount.ToString();
-            goldCountText.text = data.stageGold.ToString();
+            resultKillCount.text = data.killCount.ToString();
             yield return null;
         }
     }

@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class Durian : MonoBehaviour, IWeapon, ILevelup
 {
     private Monster monster;
     public WeaponData durianData;
+    public PlayerData playerData;
     private GameObject durian;
     private Rigidbody2D rigid;
     public float speed;
@@ -59,7 +56,7 @@ public class Durian : MonoBehaviour, IWeapon, ILevelup
                 break;
             case "Monster":
                 monster = collision.gameObject.GetComponent<Monster>();
-                monster.monsterHealth -= durianData.Atk;
+                monster.monsterHealth -= durianData.Atk * playerData.Atk;
                 break;
 
         }

@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -8,7 +6,7 @@ public class Monster : MonoBehaviour
 {
     public IObjectPool<Monster> monsterPool;
     public MonsterData data;
-    private new SpriteRenderer renderer;
+    private SpriteRenderer renderer;
     private Animator animator;
     private WaitForSeconds waitEnter;
     private WaitForSeconds waitStay;

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GravityStat
   m_EditorClassIdentifier: 
   Atk: 5
-  Level: 1
+  Level: 2
   levelupText:
   - "\uC801\uC744 \uC6A9\uD574\uC2DC\uD0A4\uB294 \n\uBC29\uC5B4\uB9C9\uC744 \uC0DD\uC131"
   - "\uC601\uC5ED \uD655\uB300 \n\uD53C\uD574\uB7C9 \uC99D\uAC00"

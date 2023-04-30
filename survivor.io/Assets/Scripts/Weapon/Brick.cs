@@ -15,6 +15,7 @@ public class Brick : MonoBehaviour, IWeapon, ILevelup
     private Vector2 shootVec;
     private Monster monster;
     public WeaponData brickData;
+    public PlayerData playerData;
     public IObjectPool<Brick> brickPool;
     
    
@@ -48,7 +49,7 @@ public class Brick : MonoBehaviour, IWeapon, ILevelup
         }
 
         monster = collision.gameObject.GetComponent<Monster>();
-        monster.monsterHealth -= brickData.Atk;
+        monster.monsterHealth -= brickData.Atk * playerData.Atk;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
