@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,8 +12,8 @@ public class BrickSpawn : MonoBehaviour
     public Brick brick;
     public WeaponData brickdata;
     private ObjectPool<Brick> brickPool;
-    private WaitForSeconds instantCoolTime;
-    private WaitForSeconds coolTime;
+    private const float INSTANT_COOLTIME = 0.3f;
+    private const float COOLTIME = 3f;
     private void Awake()
     {
         brickPool = new ObjectPool<Brick>(
@@ -27,9 +28,7 @@ public class BrickSpawn : MonoBehaviour
     }
     private void Start()
     {
-        instantCoolTime = new WaitForSeconds(0.3f);
-        coolTime = new WaitForSeconds(3.0f);
-        StartCoroutine(brickAttack());
+        BrickAttack().Forget();
     }
 
     private Brick CreateBrick()
@@ -55,19 +54,18 @@ public class BrickSpawn : MonoBehaviour
         Destroy(bricks.gameObject);
     }
 
-    private IEnumerator brickAttack()
+   
+    private async UniTaskVoid BrickAttack()
     {
-       
         while (true)
         {
             for (int i = 0; i < brickdata.Level; i++)
             {
                 brickPool.Get();
-                yield return instantCoolTime;
+                await UniTask.Delay(TimeSpan.FromSeconds(INSTANT_COOLTIME));
             }
-            yield return coolTime;
+            await UniTask.Delay(TimeSpan.FromSeconds(COOLTIME));
         }
     }
-
    
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cysharp.Threading.Tasks;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,13 +22,12 @@ public class Dagger : MonoBehaviour ,IWeapon, ILevelup
     private GameObject spawner;
     private WaitForSeconds releaseTime;
     public float rotatePow;
-
+    private const float RELEASE_TIME = 1.5f;
     
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         myPos = GameManager.instance.player.transform;
-        releaseTime = new WaitForSeconds(1.5f);
     }
 
     
@@ -64,7 +64,7 @@ public class Dagger : MonoBehaviour ,IWeapon, ILevelup
         rigid.AddTorque(rotatePow);
         target = GameManager.instance.player.GetComponent<Scaner>().targetPos;
         rigid.velocity = (target.position - myPos.position).normalized * speed;
-        StartCoroutine(release());
+        Release().Forget();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -81,9 +81,9 @@ public class Dagger : MonoBehaviour ,IWeapon, ILevelup
         daggerData.Level++;
     }
 
-    IEnumerator release()
+    private async UniTaskVoid Release()
     {
-        yield return releaseTime;
+        await UniTask.Delay(TimeSpan.FromSeconds(RELEASE_TIME));
         Ondead();
     }
 }
